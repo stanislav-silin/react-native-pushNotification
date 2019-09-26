@@ -6,7 +6,7 @@
  * @flow
  */
 
-import React from 'react';
+import React, { Fragment, useEffect } from 'react';
 import {
   SafeAreaView,
   StyleSheet,
@@ -14,7 +14,9 @@ import {
   View,
   Text,
   StatusBar,
+  Alert
 } from 'react-native';
+import firebase from 'react-native-firebase';
 
 import {
   Header,
@@ -25,6 +27,72 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 const App: () => React$Node = () => {
+  useEffect(() => {
+    this.checkPermission();
+    this.messageListener();
+  }, []);
+
+  checkPermission = async () => {
+    const enabled = await firebase.messaging().hasPermission();
+    if (enabled) {
+      this.getFcmToken();
+    } else {
+      this.requestPermission();
+    }
+  }
+
+  requestPermission = async () => {
+    try {
+      await firebase.messaging().requestPermission();
+      // User has authorised
+    } catch (error) {
+      // User has rejected permissions
+    }
+  }
+
+  messageListener = async () => {
+    this.notificationListener = firebase.notifications().onNotification((notification) => {
+      const { title, body } = notification;
+      this.showAlert(title, body);
+    });
+
+    this.notificationOpenedListener = firebase.notifications().onNotificationOpened((notificationOpen) => {
+      const { title, body } = notificationOpen.notification;
+      this.showAlert(title, body);
+    });
+
+    const notificationOpen = await firebase.notifications().getInitialNotification();
+    if (notificationOpen) {
+      const { title, body } = notificationOpen.notification;
+      this.showAlert(title, body);
+    }
+
+    this.messageListener = firebase.messaging().onMessage((message) => {
+      console.log(JSON.stringify(message));
+    });
+  }
+
+  showAlert = (title, message) => {
+    Alert.alert(
+      title,
+      message,
+      [
+        { text: 'OK', onPress: () => console.log('OK Pressed') },
+      ],
+      { cancelable: false },
+    );
+  }
+
+  getFcmToken = async () => {
+    const fcmToken = await firebase.messaging().getToken();
+    if (fcmToken) {
+      console.log(fcmToken);
+      this.showAlert('Your Firebase Token is:', fcmToken);
+    } else {
+      this.showAlert('Failed', 'No token received');
+    }
+  }
+
   return (
     <>
       <StatusBar barStyle="dark-content" />
