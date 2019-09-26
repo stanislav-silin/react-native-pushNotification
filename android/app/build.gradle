@@ -128,7 +128,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.reactnativefcm"
+        applicationId "com.qqq.reactnativefcm"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

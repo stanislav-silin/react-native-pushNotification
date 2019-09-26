@@ -1,4 +1,4 @@
-package com.reactnativefcm;
+package com.qqq.reactnativefcm;
 
 import com.facebook.react.ReactActivity;
 

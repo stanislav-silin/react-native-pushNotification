@@ -194,7 +194,6 @@
 				C94FCF83C37C9814C4131821 /* Pods-ReactNativeFcmTests.debug.xcconfig */,
 				CAFC6F22AC6A167452DDE27D /* Pods-ReactNativeFcmTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -308,6 +307,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -635,7 +635,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.qqq.reactnative;
 				PRODUCT_NAME = ReactNativeFcm;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -654,7 +654,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.qqq.reactnative;
 				PRODUCT_NAME = ReactNativeFcm;
 				VERSIONING_SYSTEM = "apple-generic";
 			};

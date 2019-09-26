@@ -1,4 +1,4 @@
-package com.reactnativefcm;
+package com.qqq.reactnativefcm;
 
 import android.app.Application;
 import android.content.Context;
