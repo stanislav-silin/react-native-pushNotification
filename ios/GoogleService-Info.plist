@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1090063535885-a7u477av3vmn8nai51qmbh2g5iochp8j.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1090063535885-a7u477av3vmn8nai51qmbh2g5iochp8j</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDeWGvx4peuYzIblJy22sV0lYEfWlQyHTA</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1090063535885</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.qqq.reactnative</string>
+	<key>PROJECT_ID</key>
+	<string>react-native-ebca3</string>
+	<key>STORAGE_BUCKET</key>
+	<string>react-native-ebca3.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1090063535885:ios:d0365caedf60e8c712ea44</string>
+	<key>DATABASE_URL</key>
+	<string>https://react-native-ebca3.firebaseio.com</string>
+</dict>
+</plist>

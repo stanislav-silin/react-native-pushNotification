@@ -1,7 +1,6 @@
 package com.qqq.reactnativefcm;
 
 import com.facebook.react.ReactActivity;
-
 public class MainActivity extends ReactActivity {
 
   /**

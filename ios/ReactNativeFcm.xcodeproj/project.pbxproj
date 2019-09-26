@@ -20,6 +20,7 @@
 		750D8D6C618B6F0D4549E0A2 /* libPods-ReactNativeFcm-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C7DBA275DB02D5D86F43D810 /* libPods-ReactNativeFcm-tvOSTests.a */; };
 		9868D0A0E178320F22C5F47A /* libPods-ReactNativeFcm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D6793A1A875DA1BA87A12A /* libPods-ReactNativeFcm.a */; };
 		A7C5AE3FCEA9C2D1836E8D9B /* libPods-ReactNativeFcmTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A552EA681DBD1578109D3938 /* libPods-ReactNativeFcmTests.a */; };
+		CE9A5307233CD98D003A5B22 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE9A5306233CD98D003A5B22 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		C7DBA275DB02D5D86F43D810 /* libPods-ReactNativeFcm-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactNativeFcm-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C94FCF83C37C9814C4131821 /* Pods-ReactNativeFcmTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeFcmTests.debug.xcconfig"; path = "Target Support Files/Pods-ReactNativeFcmTests/Pods-ReactNativeFcmTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CAFC6F22AC6A167452DDE27D /* Pods-ReactNativeFcmTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeFcmTests.release.xcconfig"; path = "Target Support Files/Pods-ReactNativeFcmTests/Pods-ReactNativeFcmTests.release.xcconfig"; sourceTree = "<group>"; };
+		CE9A5306233CD98D003A5B22 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DDBD5828FE729C11ECAC5087 /* Pods-ReactNativeFcm-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeFcm-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-ReactNativeFcm-tvOS/Pods-ReactNativeFcm-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		E39EFBE42FD3229194F0BE1A /* libPods-ReactNativeFcm-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactNativeFcm-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA852ECE38D09DB47F297393 /* Pods-ReactNativeFcm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeFcm.release.xcconfig"; path = "Target Support Files/Pods-ReactNativeFcm/Pods-ReactNativeFcm.release.xcconfig"; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				CE9A5306233CD98D003A5B22 /* GoogleService-Info.plist */,
 				13B07FAE1A68108700A75B9A /* ReactNativeFcm */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* ReactNativeFcmTests */,
@@ -294,6 +297,11 @@
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes.appletvos = {
+								enabled = 1;
+							};
+						};
 					};
 					2D02E48F1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -338,6 +346,7 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				CE9A5307233CD98D003A5B22 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
